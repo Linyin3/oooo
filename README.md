@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>养生茶与情绪调理</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 自定义样式 */
+        body {
+            background-color: #f2f4e6; /* 温和的米色背景 */
+            font-family: 'Microsoft YaHei', sans-serif;
+            color: #3b3b3b; /* 深灰色文字 */
+        }
+        .section {
+            padding: 40px 0;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #5bc0de; /* 温和的养生色 */
+        }
+        .product-card, .acupoint-card, .audio-card {
+            cursor: pointer;
+            transition: transform 0.3s;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        .product-card:hover, .acupoint-card:hover, .audio-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-card img, .acupoint-card img, .audio-card img {
+            border-radius: 10px;
+            width: 100%;
+        }
+        .color-band {
+            height: 10px;
+            background-color: #5bc0de; /* 温和的养生色 */
+            margin-bottom: 20px;
+        }
+        .modal-body img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .quote-modal .modal-dialog {
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg bg-success text-white p-3">
+        <div class="container">
+            <a class="navbar-brand text-white" href=" ">情绪养生茶</a >
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="#tea">情绪茶包</a ></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#acupoints">养生穴位</a ></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#music-therapy">养生音疗</a ></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#reviews">用户留言</a ></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#quotes">每日养生金句</a ></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 情绪茶包模块 -->
+    <div id="tea" class="section" style="background-color: #e9f4f3;">
+        <div class="color-band"></div>
+        <h2 class="section-title">情绪茶包</h2>
+        <div class="row">
+            <div class="col-md-4 product-card" data-bs-toggle="modal" data-bs-target="#teaModal1">
+                <img src="https://images.pexels.com/photos/6646360/pexels-photo-6646360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="安神助眠茶">
+                <h3>安神助眠茶</h3>
+                <p>酸枣仁、茯苓、百合</p >
+            </div>
+            <div class="col-md-4 product-card" data-bs-toggle="modal" data-bs-target="#teaModal2">
+                <img src="https://images.pexels.com/photos/6646360/pexels-photo-6646360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="树干解育茶">
+                <h3>树干解育茶</h3>
+                <p>枸杞、桂圆、菊花</p >
+            </div>
+        </div>
+    </div>
+
+    <!-- 养生穴位模块 -->
+    <div id="acupoints" class="section" style="background-color: #f4f8f2;">
+        <div class="color-band"></div>
+        <h2 class="section-title">养生穴位指导</h2>
+        <div class="row">
+            <div class="col-md-4 acupoint-card" data-bs-toggle="modal" data-bs-target="#acupointModal1">
+                <img src="https://images.pexels.com/photos/6646360/pexels-photo-6646360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="胎充穴">
+                <h4>胎充穴</h4>
+            </div>
+            <div class="col-md-4 acupoint-card" data-bs-toggle="modal" data-bs-target="#acupointModal2">
+                <img src="https://images.pexels.com/photos/6646360/pexels-photo-6646360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="内关穴">
+                <h4>内关穴</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- 养生音疗模块 -->
+    <div id="music-therapy" class="section" style="background-color: #f2fdf6;">
+        <div class="color-band"></div>
+        <h2 class="section-title">养生音疗</h2>
+        <div class="row">
+            <div class="col-md-6 audio-card" data-bs-toggle="modal" data-bs-target="#audioModal1">
+                <img src="https://images.pexels.com/photos/6646360/pexels-photo-6646360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="音疗1">
+                <h4>音疗模块1</h4>
+            </div>
+            <div class="col-md-6 audio-card" data-bs-toggle="modal" data-bs-target="#audioModal2">
+                <img src="https://images.pexels.com/photos/6646360/pexels-photo-6646360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="音疗2">
+                <h4>音疗模块2</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- 用户留言测评模块 -->
+    <div id="reviews" class="section" style="background-color: #e3f9f1;">
+        <div class="color-band"></div>
+        <h2 class="section-title">用户留言测评</h2>
+        <p>点击这里提交你的健康测评并留下你的感受。</p >
+        <!-- 留言表单（可以根据需求自行扩展） -->
+        <textarea class="form-control" rows="4" placeholder="输入留言"></textarea>
+        <button class="btn btn-primary mt-3">提交留言</button>
+    </div>
+
+    <!-- 每日养生金句问候模块 -->
+    <div id="quotes" class="section" style="background-color: #f9f9f9;">
+        <div class="color-band"></div>
+        <h2 class="section-title">每日养生金句</h2>
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#quoteModal">获取金句</button>
+    </div>
+
+    <!-- 模态框 - 安神助眠茶 -->
+    <div class="modal fade" id="teaModal1" tabindex="-1" aria-labelledby="teaModal1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="teaModal1Label">安神助眠茶</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    < img src="https://via.placeholder.com/300x200" class="img-fluid" alt="安神助眠茶">
+                    <p>安神助眠茶的配方包括酸枣仁、茯苓和百合，能够帮助安抚神经，促进睡眠。</p >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 模态框 - 音疗模块1 -->
+    <div class="modal fade" id="audioModal1" tabindex="-1" aria-labelledby="audioModal1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="audioModal1Label">音疗模块1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <audio controls>
+                        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 模态框 - 每日金句 -->
+    <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="quoteModalLabel">每日养生金句</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>“健康是最大的财富，养生是最重要的投资。”</p >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入 Bootstrap JS 和 Popper -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>
