@@ -117,8 +117,8 @@
     </nav>
     <!-- 情绪茶包模块 -->
     <div id="tea" class="section" style="background-color: #e9f4f3;">
-        <div class="color-band"></div>
-        <h2 class="section-title">情绪茶包</h2>
+   <div class="container py-5" id="products">
+        <h2 class="text-center section-title mb-4">情绪茶包模块</h2>
         <div class="row">
             <div class="col-md-4 product-card" data-bs-toggle="modal" data-bs-target="#teaModal1">
                 <img src="https://images.pexels.com/photos/6646360/pexels-photo-6646360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="安神助眠茶">
